@@ -1,0 +1,13 @@
+debug=false
+http.proxyHost=
+http.proxyPort=
+http.retryCount=0
+http.connectionTimeout=10000
+http.readTimeout=10000
+includeEntities=true
+
+oauth.accessToken=
+oauth.accessTokenSecret=
+oauth.consumerKey=
+oauth.consumerSecret=
+
