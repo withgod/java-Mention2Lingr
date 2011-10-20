@@ -1,0 +1,10 @@
+mention2lingr.
+userstream support.
+
+git clone git@github.com:withgod/java-Mention2Lingr.git
+cd java-Mention2Lingr
+cp ./src/main/resources/twitter4j.properties-template  ./src/main/resources/twitter4j.properties
+# change your keys.
+mvn package
+
+.... 後で書く
