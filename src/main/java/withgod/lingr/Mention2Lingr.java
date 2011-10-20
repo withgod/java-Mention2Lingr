@@ -1,4 +1,4 @@
-package withgod.linger;
+package withgod.lingr;
 
 import org.apache.commons.codec.binary.Hex;
 import twitter4j.*;
@@ -9,8 +9,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Logger;
 
-public class Mention2Linger {
-    private static Logger logger = Logger.getLogger(Mention2Linger.class.getName());
+public class Mention2Lingr {
+    private static Logger logger = Logger.getLogger(Mention2Lingr.class.getName());
     private String secret = null;
     private String botid  = null;
     private String roomid = null;
@@ -33,9 +33,8 @@ public class Mention2Linger {
         UserStreamListener listener = new UserStreamListener() {
             public void onStatus(Status status) {
                 String text = status.getText();
-                logger.info("onStatus:" + status.getText());
-                logger.info(String.valueOf(text.startsWith("@" + screenName)));
-                logger.info(botid + "/" + secret + "/" + roomid + "/" + screenName);
+                //logger.info("onStatus:" + status.getText());
+                //logger.info(botid + "/" + secret + "/" + roomid + "/" + screenName);
                 if (text.startsWith("@" + screenName)) {
                     say(botid, secret, roomid, status);
                 }
@@ -69,7 +68,7 @@ public class Mention2Linger {
         twitterStream.user();
     }
 
-    public Mention2Linger(String secret, String roomid, String botid) {
+    public Mention2Lingr(String secret, String roomid, String botid) {
         this.secret = secret;
         this.roomid = roomid;
         this.botid  = botid;
@@ -102,9 +101,9 @@ public class Mention2Linger {
 
     public static void main(String[] args) {
         if (args.length != 3) {
-            System.out.println("Usage: Mention2Linger lingrSecret roomId botId");
+            System.out.println("Usage: Mention2Lingr lingrSecret roomId botId");
         } else {
-            new Mention2Linger(args[0], args[1], args[2]);
+            new Mention2Lingr(args[0], args[1], args[2]);
         }
     }
 }

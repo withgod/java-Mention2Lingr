@@ -6,5 +6,5 @@ cd java-Mention2Lingr
 cp ./src/main/resources/twitter4j.properties-template  ./src/main/resources/twitter4j.properties
 # change your keys.
 mvn package
+./bin/run.sh lingrSecret roomid botname
 
-.... 後で書く
